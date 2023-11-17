@@ -15,7 +15,7 @@ describe("Task 1", () => {
     });
 });
 
-xdescribe("Task 2", () => {
+describe("Task 2", () => {
     test("Status 200: should invoke first matching route", () => {
         return request(app)
             .get("/api/cats/1")
@@ -34,7 +34,7 @@ xdescribe("Task 2", () => {
     });
 });
 
-xdescribe("Task 3", () => {
+describe("Task 3", () => {
     test("Status 200: should allow authenticated user access to secrets", () => {
         const authenticatedUser = { name: "Jim", admin: true };
         return request(app)
@@ -57,7 +57,7 @@ xdescribe("Task 3", () => {
     });
 });
 
-xdescribe("Task 4", () => {
+describe("Task 4", () => {
     test("should log info details of the original url of the request", () => {
         const authenticatedUser = { name: "Jim", admin: true };
         const consoleSpy = jest.spyOn(console, "info");
@@ -72,7 +72,7 @@ xdescribe("Task 4", () => {
     });
 });
 
-xdescribe("Task 5", () => {
+describe("Task 5", () => {
     test("Status 200: should return text from text payload", async () => {
         return request(app)
             .post("/api/text-endpoint")
